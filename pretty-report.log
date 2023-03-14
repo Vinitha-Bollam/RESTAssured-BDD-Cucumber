@@ -1,0 +1,300 @@
+
+@All @Get
+Scenario: Get Booking details for the Created request         [90m# src/main/resources/CRUDOperations.feature:32[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m                   [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mGiven [0m[32mthe request is for [0m[32m[1m"Create"[0m[32m Booking[0m                   [90m# StepDefinition.Gluecode.the_request_is_for_booking(java.lang.String,java.lang.String)[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"POST"[0m[32m request[0m                                [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe response has firstname as [0m[32m[1m"Kenny"[0m                   [90m# StepDefinition.Gluecode.the_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has lastname as [0m[32m[1m"Sebastian"[0m                [90m# StepDefinition.Gluecode.the_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has totalprice as [0m[32m[1m280[0m                      [90m# StepDefinition.Gluecode.the_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe response has depositpaid as [0m[32m[1m"true"[0m                  [90m# StepDefinition.Gluecode.the_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has checkin as [0m[32m[1m"2023-02-01"[0m                [90m# StepDefinition.Gluecode.the_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has checkout as [0m[32m[1m"2023-02-10"[0m               [90m# StepDefinition.Gluecode.the_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has additionalneeds as [0m[32m[1m"Breakfast"[0m         [90m# StepDefinition.Gluecode.the_response_has_additionalneeds_as(java.lang.String)[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"GET"[0m[32m request[0m                                 [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe updated response has firstname as [0m[32m[1m"Kenny"[0m           [90m# StepDefinition.Gluecode.the_updated_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has lastname as [0m[32m[1m"Sebastian"[0m        [90m# StepDefinition.Gluecode.the_updated_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has totalprice as [0m[32m[1m280[0m              [90m# StepDefinition.Gluecode.the_updated_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe updated response has depositpaid as [0m[32m[1m"true"[0m          [90m# StepDefinition.Gluecode.the_updated_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkin as [0m[32m[1m"2023-02-01"[0m        [90m# StepDefinition.Gluecode.the_updated_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkout as [0m[32m[1m"2023-02-10"[0m       [90m# StepDefinition.Gluecode.the_updated_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has additionalneeds as [0m[32m[1m"Breakfast"[0m [90m# StepDefinition.Gluecode.the_updated_response_has_additionalneeds_as(java.lang.String)[0m
+
+@All @Put
+Scenario: Updating the entire Created booking                 [90m# src/main/resources/CRUDOperations.feature:45[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m                   [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mGiven [0m[32mthe request is for [0m[32m[1m"Create"[0m[32m Booking[0m                   [90m# StepDefinition.Gluecode.the_request_is_for_booking(java.lang.String,java.lang.String)[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"POST"[0m[32m request[0m                                [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe response has firstname as [0m[32m[1m"Kenny"[0m                   [90m# StepDefinition.Gluecode.the_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has lastname as [0m[32m[1m"Sebastian"[0m                [90m# StepDefinition.Gluecode.the_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has totalprice as [0m[32m[1m280[0m                      [90m# StepDefinition.Gluecode.the_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe response has depositpaid as [0m[32m[1m"true"[0m                  [90m# StepDefinition.Gluecode.the_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has checkin as [0m[32m[1m"2023-02-01"[0m                [90m# StepDefinition.Gluecode.the_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has checkout as [0m[32m[1m"2023-02-10"[0m               [90m# StepDefinition.Gluecode.the_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has additionalneeds as [0m[32m[1m"Breakfast"[0m         [90m# StepDefinition.Gluecode.the_response_has_additionalneeds_as(java.lang.String)[0m
+  [32mGiven [0m[32mthe request is for [0m[32m[1m"Update"[0m[32m Booking[0m                   [90m# StepDefinition.Gluecode.the_request_is_for_booking(java.lang.String,java.lang.String)[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"PUT"[0m[32m request[0m                                 [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe updated response has firstname as [0m[32m[1m"Mahat"[0m           [90m# StepDefinition.Gluecode.the_updated_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has lastname as [0m[32m[1m"Rana"[0m             [90m# StepDefinition.Gluecode.the_updated_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has totalprice as [0m[32m[1m240[0m              [90m# StepDefinition.Gluecode.the_updated_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe updated response has depositpaid as [0m[32m[1m"true"[0m          [90m# StepDefinition.Gluecode.the_updated_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkin as [0m[32m[1m"2023-02-01"[0m        [90m# StepDefinition.Gluecode.the_updated_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkout as [0m[32m[1m"2023-02-12"[0m       [90m# StepDefinition.Gluecode.the_updated_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has additionalneeds as [0m[32m[1m"Breakfast"[0m [90m# StepDefinition.Gluecode.the_updated_response_has_additionalneeds_as(java.lang.String)[0m
+
+@All @Patch
+Scenario: Modifying some fields for the Updated booking       [90m# src/main/resources/CRUDOperations.feature:72[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m                   [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mGiven [0m[32mthe request is for [0m[32m[1m"Create"[0m[32m Booking[0m                   [90m# StepDefinition.Gluecode.the_request_is_for_booking(java.lang.String,java.lang.String)[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"POST"[0m[32m request[0m                                [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe response has firstname as [0m[32m[1m"Kenny"[0m                   [90m# StepDefinition.Gluecode.the_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has lastname as [0m[32m[1m"Sebastian"[0m                [90m# StepDefinition.Gluecode.the_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has totalprice as [0m[32m[1m280[0m                      [90m# StepDefinition.Gluecode.the_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe response has depositpaid as [0m[32m[1m"true"[0m                  [90m# StepDefinition.Gluecode.the_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has checkin as [0m[32m[1m"2023-02-01"[0m                [90m# StepDefinition.Gluecode.the_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has checkout as [0m[32m[1m"2023-02-10"[0m               [90m# StepDefinition.Gluecode.the_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has additionalneeds as [0m[32m[1m"Breakfast"[0m         [90m# StepDefinition.Gluecode.the_response_has_additionalneeds_as(java.lang.String)[0m
+  [32mGiven [0m[32mthe request is for [0m[32m[1m"PartialUpdate"[0m[32m Booking[0m            [90m# StepDefinition.Gluecode.the_request_is_for_booking(java.lang.String,java.lang.String)[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"PATCH"[0m[32m request[0m                               [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe updated response has firstname as [0m[32m[1m"Kunal"[0m           [90m# StepDefinition.Gluecode.the_updated_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has lastname as [0m[32m[1m"Kapoor"[0m           [90m# StepDefinition.Gluecode.the_updated_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has totalprice as [0m[32m[1m240[0m              [90m# StepDefinition.Gluecode.the_updated_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe updated response has depositpaid as [0m[32m[1m"true"[0m          [90m# StepDefinition.Gluecode.the_updated_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkin as [0m[32m[1m"2023-02-01"[0m        [90m# StepDefinition.Gluecode.the_updated_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkout as [0m[32m[1m"2023-02-12"[0m       [90m# StepDefinition.Gluecode.the_updated_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has additionalneeds as [0m[32m[1m"Breakfast"[0m [90m# StepDefinition.Gluecode.the_updated_response_has_additionalneeds_as(java.lang.String)[0m
+
+@All @GetAll
+Scenario: Get all the Booking ID's                          [90m# src/main/resources/CRUDOperations.feature:99[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m                 [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mGiven [0m[32mthe request is for [0m[32m[1m"Create"[0m[32m Booking[0m                 [90m# StepDefinition.Gluecode.the_request_is_for_booking(java.lang.String,java.lang.String)[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"POST"[0m[32m request[0m                              [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                              [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                              [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe response has firstname as [0m[32m[1m"Kenny"[0m                 [90m# StepDefinition.Gluecode.the_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has lastname as [0m[32m[1m"Sebastian"[0m              [90m# StepDefinition.Gluecode.the_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has totalprice as [0m[32m[1m280[0m                    [90m# StepDefinition.Gluecode.the_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe response has depositpaid as [0m[32m[1m"true"[0m                [90m# StepDefinition.Gluecode.the_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has checkin as [0m[32m[1m"2023-02-01"[0m              [90m# StepDefinition.Gluecode.the_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has checkout as [0m[32m[1m"2023-02-10"[0m             [90m# StepDefinition.Gluecode.the_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has additionalneeds as [0m[32m[1m"Breakfast"[0m       [90m# StepDefinition.Gluecode.the_response_has_additionalneeds_as(java.lang.String)[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"GET"[0m[32m request to get all Booking ID details[0m [90m# StepDefinition.Gluecode.i_send_a_request_to_get_all_booking_id_details(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                              [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                              [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe response has my bookingID[0m                         [90m# StepDefinition.Gluecode.the_response_has_my_booking_id()[0m
+
+@All @Delete
+Scenario: Delete the Created booking                  [90m# src/main/resources/CRUDOperations.feature:106[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m           [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mGiven [0m[32mthe request is for [0m[32m[1m"Create"[0m[32m Booking[0m           [90m# StepDefinition.Gluecode.the_request_is_for_booking(java.lang.String,java.lang.String)[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"POST"[0m[32m request[0m                        [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                        [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                        [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe response has firstname as [0m[32m[1m"Kenny"[0m           [90m# StepDefinition.Gluecode.the_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has lastname as [0m[32m[1m"Sebastian"[0m        [90m# StepDefinition.Gluecode.the_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has totalprice as [0m[32m[1m280[0m              [90m# StepDefinition.Gluecode.the_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe response has depositpaid as [0m[32m[1m"true"[0m          [90m# StepDefinition.Gluecode.the_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has checkin as [0m[32m[1m"2023-02-01"[0m        [90m# StepDefinition.Gluecode.the_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has checkout as [0m[32m[1m"2023-02-10"[0m       [90m# StepDefinition.Gluecode.the_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has additionalneeds as [0m[32m[1m"Breakfast"[0m [90m# StepDefinition.Gluecode.the_response_has_additionalneeds_as(java.lang.String)[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"DELETE"[0m[32m request[0m                      [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                        [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m201[0m                        [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe response body has message [0m[32m[1m"Created"[0m         [90m# StepDefinition.Gluecode.the_response_body_has_message(java.lang.String)[0m
+
+@All @CRUD
+Scenario: Create booking                              [90m# src/main/resources/CRUDWithMultipleScenarios.feature:7[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m           [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mGiven [0m[32mthe request is for [0m[32m[1m"Create"[0m[32m Booking[0m           [90m# StepDefinition.Gluecode.the_request_is_for_booking(java.lang.String,java.lang.String)[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"POST"[0m[32m request[0m                        [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                        [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                        [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe response has firstname as [0m[32m[1m"Kenny"[0m           [90m# StepDefinition.Gluecode.the_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has lastname as [0m[32m[1m"Sebastian"[0m        [90m# StepDefinition.Gluecode.the_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has totalprice as [0m[32m[1m280[0m              [90m# StepDefinition.Gluecode.the_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe response has depositpaid as [0m[32m[1m"true"[0m          [90m# StepDefinition.Gluecode.the_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has checkin as [0m[32m[1m"2023-02-01"[0m        [90m# StepDefinition.Gluecode.the_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has checkout as [0m[32m[1m"2023-02-10"[0m       [90m# StepDefinition.Gluecode.the_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has additionalneeds as [0m[32m[1m"Breakfast"[0m [90m# StepDefinition.Gluecode.the_response_has_additionalneeds_as(java.lang.String)[0m
+
+@All @CRUD
+Scenario: Get Booking details for the Created request         [90m# src/main/resources/CRUDWithMultipleScenarios.feature:33[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m                   [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"GET"[0m[32m request[0m                                 [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe updated response has firstname as [0m[32m[1m"Kenny"[0m           [90m# StepDefinition.Gluecode.the_updated_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has lastname as [0m[32m[1m"Sebastian"[0m        [90m# StepDefinition.Gluecode.the_updated_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has totalprice as [0m[32m[1m280[0m              [90m# StepDefinition.Gluecode.the_updated_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe updated response has depositpaid as [0m[32m[1m"true"[0m          [90m# StepDefinition.Gluecode.the_updated_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkin as [0m[32m[1m"2023-02-01"[0m        [90m# StepDefinition.Gluecode.the_updated_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkout as [0m[32m[1m"2023-02-10"[0m       [90m# StepDefinition.Gluecode.the_updated_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has additionalneeds as [0m[32m[1m"Breakfast"[0m [90m# StepDefinition.Gluecode.the_updated_response_has_additionalneeds_as(java.lang.String)[0m
+
+@All @CRUD
+Scenario: Updating the entire Created booking                 [90m# src/main/resources/CRUDWithMultipleScenarios.feature:45[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m                   [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mGiven [0m[32mthe request is for [0m[32m[1m"Update"[0m[32m Booking[0m                   [90m# StepDefinition.Gluecode.the_request_is_for_booking(java.lang.String,java.lang.String)[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"PUT"[0m[32m request[0m                                 [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe updated response has firstname as [0m[32m[1m"Mahat"[0m           [90m# StepDefinition.Gluecode.the_updated_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has lastname as [0m[32m[1m"Rana"[0m             [90m# StepDefinition.Gluecode.the_updated_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has totalprice as [0m[32m[1m240[0m              [90m# StepDefinition.Gluecode.the_updated_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe updated response has depositpaid as [0m[32m[1m"true"[0m          [90m# StepDefinition.Gluecode.the_updated_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkin as [0m[32m[1m"2023-02-01"[0m        [90m# StepDefinition.Gluecode.the_updated_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkout as [0m[32m[1m"2023-02-12"[0m       [90m# StepDefinition.Gluecode.the_updated_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has additionalneeds as [0m[32m[1m"Breakfast"[0m [90m# StepDefinition.Gluecode.the_updated_response_has_additionalneeds_as(java.lang.String)[0m
+
+@All @CRUD
+Scenario: Get the booking details after Updating the booking  [90m# src/main/resources/CRUDWithMultipleScenarios.feature:71[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m                   [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"GET"[0m[32m request[0m                                 [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe updated response has firstname as [0m[32m[1m"Mahat"[0m           [90m# StepDefinition.Gluecode.the_updated_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has lastname as [0m[32m[1m"Rana"[0m             [90m# StepDefinition.Gluecode.the_updated_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has totalprice as [0m[32m[1m240[0m              [90m# StepDefinition.Gluecode.the_updated_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe updated response has depositpaid as [0m[32m[1m"true"[0m          [90m# StepDefinition.Gluecode.the_updated_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkin as [0m[32m[1m"2023-02-01"[0m        [90m# StepDefinition.Gluecode.the_updated_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkout as [0m[32m[1m"2023-02-12"[0m       [90m# StepDefinition.Gluecode.the_updated_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has additionalneeds as [0m[32m[1m"Breakfast"[0m [90m# StepDefinition.Gluecode.the_updated_response_has_additionalneeds_as(java.lang.String)[0m
+
+@All @CRUD
+Scenario: Modifying some fields for the Updated booking       [90m# src/main/resources/CRUDWithMultipleScenarios.feature:83[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m                   [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mGiven [0m[32mthe request is for [0m[32m[1m"PartialUpdate"[0m[32m Booking[0m            [90m# StepDefinition.Gluecode.the_request_is_for_booking(java.lang.String,java.lang.String)[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"PATCH"[0m[32m request[0m                               [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe updated response has firstname as [0m[32m[1m"Kunal"[0m           [90m# StepDefinition.Gluecode.the_updated_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has lastname as [0m[32m[1m"Kapoor"[0m           [90m# StepDefinition.Gluecode.the_updated_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has totalprice as [0m[32m[1m240[0m              [90m# StepDefinition.Gluecode.the_updated_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe updated response has depositpaid as [0m[32m[1m"true"[0m          [90m# StepDefinition.Gluecode.the_updated_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkin as [0m[32m[1m"2023-02-01"[0m        [90m# StepDefinition.Gluecode.the_updated_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkout as [0m[32m[1m"2023-02-12"[0m       [90m# StepDefinition.Gluecode.the_updated_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has additionalneeds as [0m[32m[1m"Breakfast"[0m [90m# StepDefinition.Gluecode.the_updated_response_has_additionalneeds_as(java.lang.String)[0m
+
+@All @CRUD
+Scenario: Get the booking details for modified booking        [90m# src/main/resources/CRUDWithMultipleScenarios.feature:109[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m                   [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"GET"[0m[32m request[0m                                 [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe updated response has firstname as [0m[32m[1m"Kunal"[0m           [90m# StepDefinition.Gluecode.the_updated_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has lastname as [0m[32m[1m"Kapoor"[0m           [90m# StepDefinition.Gluecode.the_updated_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has totalprice as [0m[32m[1m240[0m              [90m# StepDefinition.Gluecode.the_updated_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe updated response has depositpaid as [0m[32m[1m"true"[0m          [90m# StepDefinition.Gluecode.the_updated_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkin as [0m[32m[1m"2023-02-01"[0m        [90m# StepDefinition.Gluecode.the_updated_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkout as [0m[32m[1m"2023-02-12"[0m       [90m# StepDefinition.Gluecode.the_updated_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has additionalneeds as [0m[32m[1m"Breakfast"[0m [90m# StepDefinition.Gluecode.the_updated_response_has_additionalneeds_as(java.lang.String)[0m
+
+@All @CRUD
+Scenario: Get all the Booking ID's                          [90m# src/main/resources/CRUDWithMultipleScenarios.feature:121[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m                 [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"GET"[0m[32m request to get all Booking ID details[0m [90m# StepDefinition.Gluecode.i_send_a_request_to_get_all_booking_id_details(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                              [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                              [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe response has my bookingID[0m                         [90m# StepDefinition.Gluecode.the_response_has_my_booking_id()[0m
+
+@All @CRUD
+Scenario: Delete the Created booking          [90m# src/main/resources/CRUDWithMultipleScenarios.feature:127[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m   [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"DELETE"[0m[32m request[0m              [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m201[0m                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe response body has message [0m[32m[1m"Created"[0m [90m# StepDefinition.Gluecode.the_response_body_has_message(java.lang.String)[0m
+
+@All @CRUD
+Scenario: Create booking                                      [90m# src/main/resources/CRUDWithSingleScenario.feature:4[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m                   [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mGiven [0m[32mthe request is for [0m[32m[1m"Create"[0m[32m Booking[0m                   [90m# StepDefinition.Gluecode.the_request_is_for_booking(java.lang.String,java.lang.String)[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"POST"[0m[32m request[0m                                [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe response has firstname as [0m[32m[1m"Kenny"[0m                   [90m# StepDefinition.Gluecode.the_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has lastname as [0m[32m[1m"Sebastian"[0m                [90m# StepDefinition.Gluecode.the_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has totalprice as [0m[32m[1m280[0m                      [90m# StepDefinition.Gluecode.the_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe response has depositpaid as [0m[32m[1m"true"[0m                  [90m# StepDefinition.Gluecode.the_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has checkin as [0m[32m[1m"2023-02-01"[0m                [90m# StepDefinition.Gluecode.the_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has checkout as [0m[32m[1m"2023-02-10"[0m               [90m# StepDefinition.Gluecode.the_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe response has additionalneeds as [0m[32m[1m"Breakfast"[0m         [90m# StepDefinition.Gluecode.the_response_has_additionalneeds_as(java.lang.String)[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m                   [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"GET"[0m[32m request[0m                                 [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe updated response has firstname as [0m[32m[1m"Kenny"[0m           [90m# StepDefinition.Gluecode.the_updated_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has lastname as [0m[32m[1m"Sebastian"[0m        [90m# StepDefinition.Gluecode.the_updated_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has totalprice as [0m[32m[1m280[0m              [90m# StepDefinition.Gluecode.the_updated_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe updated response has depositpaid as [0m[32m[1m"true"[0m          [90m# StepDefinition.Gluecode.the_updated_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkin as [0m[32m[1m"2023-02-01"[0m        [90m# StepDefinition.Gluecode.the_updated_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkout as [0m[32m[1m"2023-02-10"[0m       [90m# StepDefinition.Gluecode.the_updated_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has additionalneeds as [0m[32m[1m"Breakfast"[0m [90m# StepDefinition.Gluecode.the_updated_response_has_additionalneeds_as(java.lang.String)[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m                   [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mGiven [0m[32mthe request is for [0m[32m[1m"Update"[0m[32m Booking[0m                   [90m# StepDefinition.Gluecode.the_request_is_for_booking(java.lang.String,java.lang.String)[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"PUT"[0m[32m request[0m                                 [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe updated response has firstname as [0m[32m[1m"Mahat"[0m           [90m# StepDefinition.Gluecode.the_updated_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has lastname as [0m[32m[1m"Rana"[0m             [90m# StepDefinition.Gluecode.the_updated_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has totalprice as [0m[32m[1m240[0m              [90m# StepDefinition.Gluecode.the_updated_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe updated response has depositpaid as [0m[32m[1m"true"[0m          [90m# StepDefinition.Gluecode.the_updated_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkin as [0m[32m[1m"2023-02-01"[0m        [90m# StepDefinition.Gluecode.the_updated_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkout as [0m[32m[1m"2023-02-12"[0m       [90m# StepDefinition.Gluecode.the_updated_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has additionalneeds as [0m[32m[1m"Breakfast"[0m [90m# StepDefinition.Gluecode.the_updated_response_has_additionalneeds_as(java.lang.String)[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m                   [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"GET"[0m[32m request[0m                                 [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe updated response has firstname as [0m[32m[1m"Mahat"[0m           [90m# StepDefinition.Gluecode.the_updated_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has lastname as [0m[32m[1m"Rana"[0m             [90m# StepDefinition.Gluecode.the_updated_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has totalprice as [0m[32m[1m240[0m              [90m# StepDefinition.Gluecode.the_updated_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe updated response has depositpaid as [0m[32m[1m"true"[0m          [90m# StepDefinition.Gluecode.the_updated_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkin as [0m[32m[1m"2023-02-01"[0m        [90m# StepDefinition.Gluecode.the_updated_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkout as [0m[32m[1m"2023-02-12"[0m       [90m# StepDefinition.Gluecode.the_updated_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has additionalneeds as [0m[32m[1m"Breakfast"[0m [90m# StepDefinition.Gluecode.the_updated_response_has_additionalneeds_as(java.lang.String)[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m                   [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mGiven [0m[32mthe request is for [0m[32m[1m"PartialUpdate"[0m[32m Booking[0m            [90m# StepDefinition.Gluecode.the_request_is_for_booking(java.lang.String,java.lang.String)[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"PATCH"[0m[32m request[0m                               [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe updated response has firstname as [0m[32m[1m"Kunal"[0m           [90m# StepDefinition.Gluecode.the_updated_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has lastname as [0m[32m[1m"Kapoor"[0m           [90m# StepDefinition.Gluecode.the_updated_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has totalprice as [0m[32m[1m240[0m              [90m# StepDefinition.Gluecode.the_updated_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe updated response has depositpaid as [0m[32m[1m"true"[0m          [90m# StepDefinition.Gluecode.the_updated_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkin as [0m[32m[1m"2023-02-01"[0m        [90m# StepDefinition.Gluecode.the_updated_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkout as [0m[32m[1m"2023-02-12"[0m       [90m# StepDefinition.Gluecode.the_updated_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has additionalneeds as [0m[32m[1m"Breakfast"[0m [90m# StepDefinition.Gluecode.the_updated_response_has_additionalneeds_as(java.lang.String)[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m                   [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"GET"[0m[32m request[0m                                 [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe updated response has firstname as [0m[32m[1m"Kunal"[0m           [90m# StepDefinition.Gluecode.the_updated_response_has_firstname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has lastname as [0m[32m[1m"Kapoor"[0m           [90m# StepDefinition.Gluecode.the_updated_response_has_lastname_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has totalprice as [0m[32m[1m240[0m              [90m# StepDefinition.Gluecode.the_updated_response_has_totalprice_as(int)[0m
+  [32mAnd [0m[32mthe updated response has depositpaid as [0m[32m[1m"true"[0m          [90m# StepDefinition.Gluecode.the_updated_response_has_depositpaid_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkin as [0m[32m[1m"2023-02-01"[0m        [90m# StepDefinition.Gluecode.the_updated_response_has_checkin_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has checkout as [0m[32m[1m"2023-02-12"[0m       [90m# StepDefinition.Gluecode.the_updated_response_has_checkout_as(java.lang.String)[0m
+  [32mAnd [0m[32mthe updated response has additionalneeds as [0m[32m[1m"Breakfast"[0m [90m# StepDefinition.Gluecode.the_updated_response_has_additionalneeds_as(java.lang.String)[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m                   [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"GET"[0m[32m request to get all Booking ID details[0m   [90m# StepDefinition.Gluecode.i_send_a_request_to_get_all_booking_id_details(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m200[0m                                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe response has my bookingID[0m                           [90m# StepDefinition.Gluecode.the_response_has_my_booking_id()[0m
+  [32mGiven [0m[32mVerify the API endpoint healthcheck[0m                   [90m# StepDefinition.Gluecode.verifyTheAPIEndpointHealthcheck()[0m
+  [32mWhen [0m[32mI send a [0m[32m[1m"DELETE"[0m[32m request[0m                              [90m# StepDefinition.Gluecode.i_send_a_request(java.lang.String)[0m
+  [32mThen [0m[32mthe response is present[0m                                [90m# StepDefinition.Gluecode.the_response_is_present()[0m
+  [32mAnd [0m[32mthe response code is [0m[32m[1m201[0m                                [90m# StepDefinition.Gluecode.the_response_code_is(int)[0m
+  [32mAnd [0m[32mthe response body has message [0m[32m[1m"Created"[0m                 [90m# StepDefinition.Gluecode.the_response_body_has_message(java.lang.String)[0m
