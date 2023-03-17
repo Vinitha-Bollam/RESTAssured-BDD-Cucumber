@@ -1,11 +1,10 @@
 package stepdefs;
 
 import ReusableClasses.*;
-import io.cucumber.java.en.And;
-import io.restassured.response.Response;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.restassured.response.Response;
 import org.testng.Assert;
 import static io.restassured.path.json.JsonPath.from;
 
